@@ -492,7 +492,7 @@ cursor: pointer;
 border-radius: 12px;
 padding-left: 54px;
 padding-top:15px;
-height:40px;
+height:1140px;
                 }
                 #dm-user {
                     position: absolute;
