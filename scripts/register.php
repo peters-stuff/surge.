@@ -31,3 +31,4 @@ file_put_contents('C:/xampp/htdocs/newsurg/data/login/'.$inputusername.'.pass',$
 file_put_contents('C:/xampp/htdocs/newsurg/data/tempaccess/'.$inputusername.'.pass',getRandomString($n));
 echo "<html><head><script>window.location.replace('/newsurg/home/?u=".$inputusername."&ta=".file_get_contents('C:/xampp/htdocs/newsurg/data/tempaccess/'.$inputusername.'.pass')."')</script></head></html>";
 ?>
+# Register
