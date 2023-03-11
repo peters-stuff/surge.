@@ -3,6 +3,7 @@
     <head>
 <title>Surge | Login - Welcome To Surge! Please Enter Your Credentials</title>
 <meta name="surge:pid" content="983aUIDnajd903294279csyh8">
+<link rel="manifest" href="/newsurg/manifest.json">
 <meta name="theme-color" content="#80BFFF">
 <meta name="description" content="Surge is a social media where you can have fun with your friends, chat and create.">
 <meta name="keywords" content="Surge, Social, Media, Social Media, SocialMedia, Chat, Freinds, Message, Messages">

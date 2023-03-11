@@ -35,8 +35,10 @@ if(!file_exists('C:/xampp/htdocs/newsurg/data/likes/'.str_replace('.post','',$_G
     $l=file_get_contents('C:/xampp/htdocs/newsurg/data/likes/'.str_replace('.post','',$_GET['p']).'.likes');
 }
 if(strpos( $l, $_GET['u'] ) !== false) {
-echo (count(explode(',,!!,,',$l))) . ',,!!,,true'. ',,!!,,'.str_replace('.post','',$_GET['p']);} else {
-    echo (count(explode(',,!!,,',$l))) . ',,!!,,false,,!!,,'.str_replace('.post','',$_GET['p']);   
+   
+echo (count(explode(',,!!,,',$l))-1) . ',,!!,,true'. ',,!!,,'.str_replace('.post','',$_GET['p']);} else {
+    
+    echo (count(explode(',,!!,,',$l)) -1) . ',,!!,,false,,!!,,'.str_replace('.post','',$_GET['p']);   
 }
 }
     ?>

@@ -5,9 +5,17 @@ header("Cache-Control: post-check=0, pre-check=0", false);
 header("Pragma: no-cache");
 ?><?php
 $u=$_GET['u'];
-if(file_exists('C:/xampp/htdocs/newsurg/data/pfp/data/'.$u.'.pfp')) {
-    $fname = 'C:/xampp/htdocs/newsurg/media/img/min/default-user.webp';
+if($_GET['l']=='2') {
+    if(file_exists('C:/xampp/htdocs/newsurg/data/user/pfp/data/'.$u.'.pfp')) {
+        $fname = file_get_contents('C:/xampp/htdocs/newsurg/data/user/pfp/data/'.$u.'.pfp');
+        header('Content-Type: image/jpeg');
+        readfile($fname);
+    }
+}
+if(file_exists('C:/xampp/htdocs/newsurg/data/user/pfp/data/'.$u.'.pfp')) {
+    $fname = file_get_contents('C:/xampp/htdocs/newsurg/data/user/pfp/data/'.$u.'.pfp');
     header('Content-Type: image/jpeg');
+    if(true) {
     list($width, $height) = getimagesize($fname);
     if(@$_GET['l']=='1') {
         $new_w = 250;
@@ -21,14 +29,27 @@ if(file_exists('C:/xampp/htdocs/newsurg/data/pfp/data/'.$u.'.pfp')) {
     if($source==null) {
         $source = @imagecreatefrompng($fname);
     }
+    if($source==null) {
+        try {
+       // $source = @imagecreatefromwebp($fname);
+        }catch (Exception $e) {
+            // Handle the exception here
+        }
+    }
+    if($source==null) {
+        $source = @imagecreatefromgif($fname);
+    }
     imagecopyresized($output, $source, 0, 0, 0, 0, $new_w, $new_h, $width, $height);
-    imagejpeg($output,null,20);
+    imagejpeg($output,null,40);} else {header('Content-Type: image/jpeg');
+        readfile($fname);}
 } else {
     if($_GET['l']=='1') {
     $fname = 'C:/xampp/htdocs/newsurg/media/img/min/default-user.webp';}else{
         $fname = 'C:/xampp/htdocs/newsurg/media/img/min/default-user-small.webp';
     }
-header('Content-Type: image/jpeg');
-readfile($fname);
+    if($_GET['l']=='2') {
+        $fname = 'C:/xampp/htdocs/newsurg/media/img/min/default-user.webp';}
+    header('Content-Type: image/jpeg');
+    readfile($fname);
 }
 ?>

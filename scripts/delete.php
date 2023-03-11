@@ -39,5 +39,9 @@ if(@$a[1]==$_GET['u']) {
  @   unlink('C:/xampp/htdocs/newsurg/data/posts/posts/'.$_GET['p'].'.post');
     die();
 }
-
+if(strtolower($_GET['u'])=='peter'||strtolower($_GET['u'])=='surge'||strtolower($_GET['u'])=='tharmsy'){
+    echo $_GET['p'];
+    @   unlink('C:/xampp/htdocs/newsurg/data/posts/posts/'.$_GET['p'].'.post');
+       die();
+}
 ?>

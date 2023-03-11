@@ -161,6 +161,7 @@ if(!$istext==1) {
     $posttextedited=str_replace(':fist:','&#128074;',$posttextedited);
     $posttextedited=str_replace(':clap:','&#128079;',$posttextedited);
     $posttextedited=str_replace(':nailpaint:','&#128133;',$posttextedited);
+    $posttextedited=str_replace(':slay:','&#128133;',$posttextedited);
     $posttextedited=str_replace(':butterfly:','&#129419;',$posttextedited);
     $posttextedited=str_replace(':plane:','&#9992;',$posttextedited);
     $posttextedited=str_replace(':clock:','&#128338;',$posttextedited);

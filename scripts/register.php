@@ -7,6 +7,14 @@ header("Pragma: no-cache");
 <?php
 $inputpassword=$_POST['password'];
 $inputusername=$_POST['username'];
+if (strpos($inputusername, ',,!!,,') !== false) {
+  echo "<html><head><script>window.location.replace('/newsurg/?e=el')</script></head></html>";
+  die();
+}
+if(strlen($inputusername)>20) {    echo "<html><head><script>window.location.replace('/newsurg/?e=el')</script></head></html>";
+  die();}
+  if(3>strlen($inputusername)) {    echo "<html><head><script>window.location.replace('/newsurg/?e=el')</script></head></html>";
+    die();}
 if(file_exists('C:/xampp/htdocs/newsurg/data/login/'.$inputusername.".pass")) {
     echo "<html><head><script>window.location.replace('/newsurg/?e=ae')</script></head></html>";
     die();
@@ -26,9 +34,8 @@ function getRandomString($n)
   return $randomString;
 }
 
-echo getRandomString($n);
+file_put_contents('C:/xampp/htdocs/newsurg/data/user/date/'.$inputusername.'.date',date('m/d/Y'));
 file_put_contents('C:/xampp/htdocs/newsurg/data/login/'.$inputusername.'.pass',$hashed);
 file_put_contents('C:/xampp/htdocs/newsurg/data/tempaccess/'.$inputusername.'.pass',getRandomString($n));
 echo "<html><head><script>window.location.replace('/newsurg/home/?u=".$inputusername."&ta=".file_get_contents('C:/xampp/htdocs/newsurg/data/tempaccess/'.$inputusername.'.pass')."')</script></head></html>";
 ?>
-# Register
