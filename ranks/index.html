@@ -1,1 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rank List</title>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
 
+      #container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      #click-me {
+        padding: 10px 20px;
+        background-color: #f8f8f8;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        transition: opacity 0.5s;
+      }
+
+      #rank-box {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        width: 400px;
+        height: 400px;
+        background-color: #f8f8f8;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        overflow-y: scroll;
+        scrollbar-width: thin;
+        scrollbar-color: gray #f8f8f8;
+      }
+
+      #rank-box.open {
+        display: block;
+      }
+
+      #click-me.hide {
+        opacity: 0;
+      }
+
+      .rank {
+        font-family: sans-serif;
+        display: block;
+        padding: 10px 20px;
+        border-radius: 20px;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+        animation: glow 2s ease-in-out infinite alternate;
+        margin-bottom: 10px;
+      }
+
+      .developer {
+        background-color: red;
+        color: white;
+      }
+
+      .External {
+        background-color: rgb(0, 132, 255);
+        color: white;
+      }
+
+      .Soon {
+        background-color: rgb(158, 158, 158);
+        color: white;
+      }
+
+      .verified {
+        background-color: rgb(12, 167, 228);
+        color: white;
+      }
+
+      @keyframes glow {
+        from {
+          box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+        }
+        to {
+          box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+        }
+      }
+
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background-color: #f8f8f8;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background-color: gray;
+        border-radius: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="click-me">Click me</div>
+      <div id="rank-box">
+        <div class="rank developer">Developer</div>
+        <div class="rank External">External Dev</div>
+        <div class="rank verified">Verified</div>
+        <div class="rank Soon">SOON</div>
+        <div class="rank Soon">SOON</div>
+        <div class="rank Soon">SOOON</div>
+      </div>
+    </div>
+
+    <script>
+      var clickMe = document.getElementById('click-me');
+      var rankBox = document.getElementById('rank-box');
+      clickMe.addEventListener('click', function() {
+        clickMe.classList.add('hide');
+        rankBox.classList.add('open');
+      });
+    </script>
+  </body>
+</html>
