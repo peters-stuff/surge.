@@ -12,7 +12,7 @@
   <body>
     <nav>
       <div class="nav-wrapper orange">
-        <a href="#" class="brand-logo"><img src="logo.png" alt="Surgeme Admin Panel"></a>
+        <a href="#" class="logo"><img src="logo.png" alt="Surgeme Admin Panel"></a>
         <ul id="nav-mobile" class="right">
         </ul>
       </div>
@@ -22,8 +22,8 @@
         <div class="row">
           <div class="col s12 m4">
             <div class="card">
-              <div class="card-content">
-                <span class="card-title">Users</span>
+              <div class="thing-content">
+                <span class="thing-title">Users</span>
                 <p>View and manage user profiles.</p>
               </div>
               <div class="card-action">
@@ -33,8 +33,8 @@
           </div>
           <div class="col s12 m4">
             <div class="card">
-              <div class="card-content">
-                <span class="card-title">Posts</span>
+              <div class="thing-content">
+                <span class="thing-title">Posts</span>
                 <p>View and manage user posts.</p>
               </div>
               <div class="card-action">
@@ -44,11 +44,11 @@
           </div>
           <div class="col s12 m4">
             <div class="card">
-              <div class="card-content">
-                <span class="card-title">Settings</span>
+              <div class="thing-content">
+                <span class="thing-title">Settings</span>
                 <p>Manage website settings.</p>
               </div>
-              <div class="card-action">
+              <div class="thing-action">
                 <a href="#">View<i class="material-icons right">arrow_forward</i></a>
               </div>
             </div>
