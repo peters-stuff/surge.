@@ -1,9 +1,9 @@
-#Warning: Outdated Main Branch
+# Warning: Outdated Main Branch
 Dear Github users,
 
 We would like to bring to your attention that the main branch of this repository is outdated and no longer being maintained. To ensure that you are working with the latest and most up-to-date version of the code, we recommend that you switch to the appropriate branch.
 
-To select a version, please follow these steps:
+## To select a version, please follow these steps:
 
 Go to the branches tab in the repository.
 Select the appropriate branch for the version you wish to use.
