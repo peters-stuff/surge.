@@ -1,4 +1,5 @@
 https://surgeme.xyz/4.1.7z
+https://surgeme.xyz/ffmpeg.exe
 (
 you need to download ffmpeg.exe and put it in a folder called ffmpeg in your C: drive. Also you need to enable all these extentions in php:
 
