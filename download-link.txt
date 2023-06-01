@@ -1,1 +1,51 @@
 https://surgeme.xyz/4.1.7z
+(
+you need to download ffmpeg.exe and put it in a folder called ffmpeg in your C: drive. Also you need to enable all these extentions in php:
+
+extension=php_com_dotnet.dll
+extension=php_com_dotnet
+extension=bz2
+extension=curl
+;extension=ffi
+;extension=ftp
+extension=fileinfo
+extension=gd
+extension=gettext
+;extension=gmp
+extension=intl
+extension=imagick
+extension=php_imagick
+;extension=imap
+extension=ldap
+extension=mbstring
+extension=exif      ; Must be after mbstring as it depends on it
+extension=mysqli
+;extension=oci8_12c  ; Use with Oracle Database 12c Instant Client
+;extension=oci8_19  ; Use with Oracle Database 19 Instant Client
+;extension=odbc
+extension=openssl
+extension=pdo_firebird
+extension=pdo_mysql
+extension=pdo_oci
+extension=pdo_odbc
+extension=pdo_pgsql
+extension=pdo_sqlite
+;extension=pgsql
+;extension=shmop
+extension=pcntl.so
+extension=php_pcntl.dll
+extension=php_pcntl
+extension=pcntl
+; The MIBS data available in the PHP distribution must be installed.
+; See https://www.php.net/manual/en/snmp.installation.php
+;extension=snmp
+
+;extension=soap
+extension=sockets
+;extension=sodium
+;extension=sqlite3
+;extension=tidy
+;extension=xsl
+extension=zip
+
+)
